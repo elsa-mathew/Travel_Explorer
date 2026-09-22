@@ -1,16 +1,241 @@
-# React + Vite
+Travel Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern travel discovery website built with React, JavaScript, HTML, and CSS. Travel Explorer helps users discover destinations, explore travel experiences by mood, view destination details, and save favourite destinations.
 
-Currently, two official plugins are available:
+The project focuses on a clean, cinematic and editorial travel experience with a warm, nature-inspired visual style.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Features
 
-## React Compiler
+    Home Page
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+        Cinematic hero section
 
-## Expanding the ESLint configuration
+        Destination discovery section
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+        Experience promise
+
+        Popular destinations
+
+        Travel by mood
+
+        Featured escape
+
+        Travel statistics
+
+        Newsletter / CTA
+
+        Footer
+
+    Destinations
+
+        Destination listing page
+
+        Destination category selection
+
+        Categories such as:
+
+        Beach
+
+        Mountains
+
+        Adventure
+
+        Nature
+
+        Culture
+
+        Wildlife
+
+        Wellness
+
+        Destination cards with image, location, rating and description
+
+        Category filtering through URL parameters
+
+    Destination Details
+
+        Dynamic destination detail pages
+
+        Destination-specific hero section
+
+        Rating and travel type
+
+        Favourite button
+
+    Favourites
+
+        Add/remove destinations from favourites
+
+        Favourite state shared across the application
+
+        Favourite data stored in localStorage
+
+        Empty favourites state with navigation back to destinations
+
+    Contact
+
+        Contact information section
+
+        Contact form UI
+
+    Navigation
+
+        React Router based navigation
+
+        Active navigation item styling
+
+        Logo navigation to home
+
+Technologies Used
+
+    React
+
+    JavaScript (ES6+)
+
+    HTML / JSX
+
+    CSS
+
+    React Router DOM
+
+    Vite
+
+    LocalStorage
+
+📁 Project Structure
+
+Travel_Explorer/
+│
+├── public/
+│   └── images/
+│       ├── logo.png
+│       ├── hero.jpg
+│       └── destinations/
+│           ├── bali.png
+│           ├── paris.png
+│           ├── norway.png
+│           ├── japan.png
+│           ├── switzerland.png
+│           ├── new-zealand.png
+│           ├── maldives.png
+│           ├── costa-rica.png
+│           ├── kerala.png
+│           └── bali-wellness.png
+│
+├── src/
+│   ├── components/
+│   │   ├── Navbar/
+│   │   ├── Hero/
+│   │   ├── Discovery/
+│   │   ├── ExperiencePromise/
+│   │   ├── Destinations/
+│   │   ├── TravelMood/
+│   │   ├── FeaturedEscape/
+│   │   ├── TravelStats/
+│   │   ├── Newsletter/
+│   │   ├── Footer/
+│   │   ├── Favourites/
+│   │   └── Contact/
+│   │
+│   ├── context/
+│   │   ├── FavouriteContext.js
+│   │   └── FavouriteProvider.jsx
+│   │
+│   ├── hooks/
+│   │   └── useFavourites.js
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Destinations.jsx
+│   │   ├── DestinationDetails.jsx
+│   │   ├── Favourites.jsx
+│   │   └── Contact.jsx
+│   │
+│   ├── styles/
+│   │   └── global.css
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+
+Getting Started
+
+        1. Clone the repository
+
+        git clone <your-repository-url>
+
+        2. Navigate to the project
+
+        cd Travel_Explorer
+
+        3. Install dependencies
+
+        npm install
+
+        4. Start the development server
+
+        npm run dev
+
+        The application will be available at:
+
+        http://localhost:5173/
+
+Application Routes
+
+    Route
+
+        Page
+
+        /Home
+
+        /destinations
+
+        Destinations
+
+        /destinations/:destinationId
+
+        Destination Details
+
+        /favourites
+
+        Favourites
+
+        /contact
+
+        Contact
+
+Favourite System
+
+Travel Explorer uses React Context to manage favourite destinations globally.
+
+The favourite system consists of:
+
+FavouriteContext
+       ↓
+FavouriteProvider
+       ↓
+useFavourites()
+       ↓
+Destination Cards / Details / Favourites
+
+Favourite destinations are stored in the browser's localStorage, allowing the saved destinations to remain available after refreshing the page.
+
+Destination Filtering
+
+Destination categories are stored in the URL.
+
+Example:
+
+/destinations?category=Beach
+
+The Destinations page reads the category from the URL and displays matching destinations.
+
+This also allows the Travel by Mood section on the Home page to navigate directly to a filtered destination listing.
+
