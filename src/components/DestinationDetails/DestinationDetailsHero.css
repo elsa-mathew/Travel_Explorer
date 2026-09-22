@@ -1,0 +1,129 @@
+.destination-details-hero {
+    position: relative;
+
+    width: 90%;
+    max-width: 1200px;
+
+    height: 560px;
+
+    margin: 110px auto 0;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+}
+
+.destination-details-hero img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.destination-details-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.05) 65%
+    );
+}
+
+.destination-details-content {
+    position: absolute;
+
+    left: 45px;
+    bottom: 40px;
+
+    z-index: 2;
+
+    color: white;
+}
+
+.destination-details-content p {
+    margin: 0 0 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #F59A32;
+}
+
+.destination-details-content h1 {
+    margin: 0 0 15px;
+
+    font-size: 64px;
+    line-height: 1;
+
+    color: white;
+}
+
+.destination-details-meta {
+    display: flex;
+
+    gap: 20px;
+
+    font-size: 14px;
+}
+
+.details-favourite {
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    z-index: 3;
+
+    width: 46px;
+    height: 46px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+    color: #123C2D;
+
+    font-size: 21px;
+
+    cursor: pointer;
+}
+
+.details-favourite {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    width: 46px;
+    height: 46px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+    color: #123C2D;
+    font-size: 23px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.details-favourite:hover {
+    transform: scale(1.08);
+}
+
+.details-favourite.active {
+    color: #F59A32;
+    background-color: #FFFFFF;
+}

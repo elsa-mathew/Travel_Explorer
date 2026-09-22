@@ -1,0 +1,77 @@
+.things-to-do {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.things-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 45px;
+}
+
+.things-header h2 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.1;
+    color: #123C2D;
+}
+
+.things-intro {
+    max-width: 420px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #707872;
+}
+
+.activities-list {
+    border-top: 1px solid #DDE7D8;
+}
+
+.activity-item {
+    display: grid;
+    grid-template-columns: 70px 1fr 40px;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid #DDE7D8;
+    transition: padding 0.3s ease;
+}
+
+.activity-item:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.activity-number {
+    font-size: 12px;
+    font-weight: 700;
+    color: #F59A32;
+}
+
+.activity-content h3 {
+    margin: 0 0 7px;
+    font-size: 20px;
+    color: #123C2D;
+}
+
+.activity-content p {
+    margin: 0;
+    max-width: 600px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #707872;
+}
+
+.activity-arrow {
+    font-size: 20px;
+    color: #123C2D;
+    transition: transform 0.3s ease;
+}
+
+.activity-item:hover .activity-arrow {
+    transform: translateX(5px);
+}

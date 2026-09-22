@@ -1,0 +1,71 @@
+.travel-stats {
+    width: 94%;
+    max-width: 1400px;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+
+    gap: 40px;
+
+    align-items: center;
+    background-color: rgba(199, 195, 195, 0.9);
+    width: 94%;
+    max-width: 1400px;
+    height: 300px;
+
+    margin: 120px auto;
+
+    border-radius: 28px;
+
+}
+
+.stats-header h2 {
+    margin-left: 20px;
+
+    font-size: 36px;
+    line-height: 1.15;
+
+    color: #123C2D;
+}
+
+.stats-grid {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+.stat-item {
+    padding: 20px;
+
+    border: 1px solid #DDE7D8;
+    border-radius: 16px;
+
+    background-color: #F7F7F2;
+}
+
+.stat-item h3 {
+    margin: 0 0 6px;
+
+    font-size: 30px;
+
+    color: #123C2D;
+}
+
+.stat-item p {
+    margin: 0px;
+
+    font-size: 13px;
+
+    color: #707872;
+}
+
+.section-label {
+    margin-left: 20px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #e1ff4d;
+}

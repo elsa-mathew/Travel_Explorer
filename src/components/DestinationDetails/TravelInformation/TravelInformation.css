@@ -1,0 +1,50 @@
+.travel-information {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 70px 0;
+    border-top: 1px solid #DDE7D8;
+    border-bottom: 1px solid #DDE7D8;
+}
+
+.travel-info-header {
+    margin-bottom: 45px;
+}
+
+.travel-info-header h2 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.1;
+    color: #123C2D;
+}
+
+.travel-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #DDE7D8;
+    border-left: 1px solid #DDE7D8;
+}
+
+.travel-info-item {
+    min-height: 120px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border-right: 1px solid #DDE7D8;
+    border-bottom: 1px solid #DDE7D8;
+}
+
+.travel-info-item span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #707872;
+}
+
+.travel-info-item strong {
+    font-size: 16px;
+    font-weight: 600;
+    color: #123C2D;
+}

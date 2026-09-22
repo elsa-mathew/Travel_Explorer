@@ -1,0 +1,35 @@
+.contact-hero {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 320px;
+    margin: 110px auto 0;
+    padding: 65px;
+    display: flex;
+    align-items: center;
+    border-radius: 28px;
+    background-color: #123C2D;
+}
+
+.contact-hero-content {
+    max-width: 700px;
+}
+
+.contact-hero .section-label {
+    margin-bottom: 15px;
+    color: #F59A32;
+}
+
+.contact-hero h1 {
+    margin: 0 0 20px;
+    font-size: 52px;
+    line-height: 1.05;
+    color: #FFFFFF;
+}
+
+.contact-hero-content > p:last-child {
+    max-width: 520px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #DDE7D8;
+}

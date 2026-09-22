@@ -1,0 +1,76 @@
+.travel-mood {
+    width: 94%;
+    max-width: 1400px;
+    margin: 70px auto 120px;
+}
+
+.mood-header {
+    margin-bottom: 35px;
+}
+
+.mood-header h2 {
+    margin: 0;
+
+    font-size: 36px;
+    color: #123C2D;
+}
+
+.category-rail {
+    display: flex;
+
+    gap: 16px;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+}
+
+.category-item {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 22px;
+
+    border: 1px solid #DDE7D8;
+    border-radius: 30px;
+
+    background-color: transparent;
+
+    color: #123C2D;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.category-icon {
+    font-size: 18px;
+    color: #F59A32;
+}
+
+.category-item:hover {
+    background-color: #123C2D;
+    color: white;
+}
+
+.category-item:hover .category-icon {
+    color: #F59A32;
+}
+
+.category-item {
+    border: none;
+    background-color: rgb(145, 146, 144);
+    cursor: pointer;
+    font: inherit;
+}
+
+.category-item:hover {
+    color: #F59A32;
+}

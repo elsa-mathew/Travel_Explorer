@@ -1,0 +1,49 @@
+.experience-promise {
+    width: 94%;
+    max-width: 1400px;
+    height: 100px;
+
+    margin: 70px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 30px 0;
+
+    border-top: 1px solid #DDE7D8;
+    border-bottom: 1px solid #DDE7D8;
+}
+
+.promise-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    padding: 10px 25px;
+
+    border-right: 1px solid #DDE7D8;
+}
+
+.promise-item:last-child {
+    border-right: none;
+}
+
+.promise-icon {
+    font-size: 22px;
+    color: #F59A32;
+}
+
+.promise-item h3 {
+    margin: 0 0 5px;
+
+    font-size: 16px;
+    color: #123C2D;
+}
+
+.promise-item p {
+    margin: 0;
+
+    font-size: 13px;
+    color: #707872;
+}

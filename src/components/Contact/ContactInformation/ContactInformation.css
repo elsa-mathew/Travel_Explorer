@@ -1,0 +1,48 @@
+.contact-information {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto 70px;
+}
+
+.contact-info-header {
+    margin-bottom: 40px;
+}
+
+.contact-info-header h2 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.1;
+    color: #123C2D;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #DDE7D8;
+    border-left: 1px solid #DDE7D8;
+}
+
+.contact-info-item {
+    min-height: 130px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border-right: 1px solid #DDE7D8;
+    border-bottom: 1px solid #DDE7D8;
+}
+
+.contact-info-item span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #707872;
+}
+
+.contact-info-item strong {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #123C2D;
+}

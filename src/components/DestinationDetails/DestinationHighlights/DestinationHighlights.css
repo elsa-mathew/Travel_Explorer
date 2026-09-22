@@ -1,0 +1,77 @@
+.destination-highlights {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 100px auto;
+}
+
+.highlights-header {
+    margin-bottom: 35px;
+}
+
+.highlights-header h2 {
+    margin: 0;
+
+    font-size: 40px;
+    line-height: 1.1;
+
+    color: #123C2D;
+}
+
+.highlights-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.highlight-card {
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background-color: #F7F7F2;
+}
+
+.highlight-image {
+    height: 280px;
+
+    overflow: hidden;
+}
+
+.highlight-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.highlight-card:hover .highlight-image img {
+    transform: scale(1.05);
+}
+
+.highlight-content {
+    padding: 20px 22px 24px;
+}
+
+.highlight-content span {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #F59A32;
+}
+
+.highlight-content h3 {
+    margin: 7px 0 0;
+
+    font-size: 22px;
+
+    color: #123C2D;
+}
