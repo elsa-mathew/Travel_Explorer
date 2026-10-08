@@ -75,3 +75,68 @@
 
     color: #123C2D;
 }
+
+@media (max-width: 768px) {
+
+    .destination-highlights {
+        width: calc(100% - 30px);
+        margin: 60px auto;
+    }
+
+    .highlights-header {
+        margin-bottom: 25px;
+    }
+
+    .highlights-header .section-label {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+    }
+
+    .highlights-header h2 {
+        font-size: 30px;
+        line-height: 1.1;
+        margin: 0;
+    }
+
+    .highlights-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .highlight-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .highlight-image {
+        width: 100%;
+        height: 220px;
+        border-radius: 18px;
+        overflow: hidden;
+    }
+
+    .highlight-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    .highlight-content {
+        padding: 12px 2px 0;
+    }
+
+    .highlight-content span {
+        font-size: 10px;
+        color: #707872;
+    }
+
+    .highlight-content h3 {
+        margin: 5px 0 0;
+        font-size: 18px;
+        color: #123C2D;
+    }
+
+}

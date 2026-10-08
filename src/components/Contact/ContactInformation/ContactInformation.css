@@ -46,3 +46,41 @@
     font-weight: 600;
     color: #123C2D;
 }
+
+@media (max-width: 768px) {
+
+    .contact-information {
+        width: calc(100% - 30px);
+        margin: 60px auto 50px;
+    }
+
+    .contact-info-header {
+        margin-bottom: 30px;
+    }
+
+    .contact-info-header h2 {
+        font-size: 30px;
+        line-height: 1.1;
+    }
+
+    .contact-info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-info-item {
+        min-height: 110px;
+        padding: 18px 14px;
+        gap: 8px;
+    }
+
+    .contact-info-item span {
+        font-size: 9px;
+        letter-spacing: 1.3px;
+    }
+
+    .contact-info-item strong {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+}

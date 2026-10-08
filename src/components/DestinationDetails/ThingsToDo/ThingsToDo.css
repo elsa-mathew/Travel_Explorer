@@ -75,3 +75,58 @@
 .activity-item:hover .activity-arrow {
     transform: translateX(5px);
 }
+@media (max-width: 768px) {
+
+    .things-to-do {
+        width: calc(100% - 30px);
+        margin: 60px auto;
+    }
+
+    .things-header {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .things-header h2 {
+        font-size: 30px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .things-intro {
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .activity-item {
+        grid-template-columns: 35px minmax(0, 1fr) 25px;
+        gap: 12px;
+        padding: 18px 0;
+    }
+
+    .activity-item:hover {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .activity-number {
+        font-size: 10px;
+    }
+
+    .activity-content h3 {
+        margin: 0 0 5px;
+        font-size: 16px;
+    }
+
+    .activity-content p {
+        max-width: 100%;
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .activity-arrow {
+        font-size: 17px;
+    }
+
+}

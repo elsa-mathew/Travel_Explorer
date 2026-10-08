@@ -1,31 +1,45 @@
+import { useParams } from "react-router-dom";
+import destinations from "../../../data/destinations";
 import "./TravelInformation.css";
 
 function TravelInformation() {
 
-    const information = [
+    const { destinationId } = useParams();
+
+    const destination = destinations.find(
+        (item) => item.id === destinationId
+    );
+
+    if (!destination) {
+        return null;
+    }
+
+    const information = destination.travelInformation;
+
+    const items = [
         {
-            label: "BEST TIME",
-            value: "April – October"
+            label: "LANGUAGE",
+            value: information.language
         },
         {
             label: "CURRENCY",
-            value: "Indonesian Rupiah (IDR)"
-        },
-        {
-            label: "LANGUAGE",
-            value: "Indonesian · Balinese"
+            value: information.currency
         },
         {
             label: "TIMEZONE",
-            value: "GMT +8"
+            value: information.timezone
         },
         {
-            label: "IDEAL DURATION",
-            value: "5 – 7 Days"
+            label: "VISA",
+            value: information.visa
         },
         {
-            label: "TRAVEL STYLE",
-            value: "Beach · Culture · Nature"
+            label: "TRANSPORT",
+            value: information.transport
+        },
+        {
+            label: "CONNECTIVITY",
+            value: information.connectivity
         }
     ];
 
@@ -33,26 +47,25 @@ function TravelInformation() {
         <section className="travel-information">
 
             <div className="travel-info-header">
-                <p className="section-label">
-                    TRAVEL INFORMATION
-                </p>
-
                 <h2>
-                    Everything you need
-                    <br />
-                    before you go.
+                    Travel information
                 </h2>
             </div>
 
             <div className="travel-info-grid">
 
-                {information.map((item) => (
+                {items.map((item) => (
                     <div
                         className="travel-info-item"
                         key={item.label}
                     >
-                        <span>{item.label}</span>
-                        <strong>{item.value}</strong>
+                        <span>
+                            {item.label}
+                        </span>
+
+                        <strong>
+                            {item.value}
+                        </strong>
                     </div>
                 ))}
 

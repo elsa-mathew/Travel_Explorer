@@ -1,13 +1,23 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
     return (
         <nav className="navbar">
 
+            {/* Logo */}
             <Link
                 to="/"
                 className="navbar-logo"
+                onClick={closeMenu}
             >
                 <img
                     src="/images/logo.png"
@@ -28,9 +38,11 @@ function Navbar() {
 
             </Link>
 
+
+            {/* Desktop Navigation */}
             <div className="navbar-links">
 
-                <NavLink to="/">
+                <NavLink to="/" end>
                     Home
                 </NavLink>
 
@@ -48,6 +60,8 @@ function Navbar() {
 
             </div>
 
+
+            {/* Actions */}
             <div className="navbar-actions">
 
                 <Link
@@ -58,7 +72,55 @@ function Navbar() {
                     ♡
                 </Link>
 
+
+                {/* Mobile Menu Button */}
+                <button
+                    className="navbar-menu"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    aria-label="Toggle navigation menu"
+                    aria-expanded={menuOpen}
+                >
+                    {menuOpen ? "✕" : "☰"}
+                </button>
+
             </div>
+
+
+            {/* Mobile Navigation */}
+            {menuOpen && (
+                <div className="mobile-menu">
+
+                    <NavLink
+                        to="/"
+                        end
+                        onClick={closeMenu}
+                    >
+                        Home
+                    </NavLink>
+
+                    <NavLink
+                        to="/destinations"
+                        onClick={closeMenu}
+                    >
+                        Destinations
+                    </NavLink>
+
+                    <NavLink
+                        to="/favourites"
+                        onClick={closeMenu}
+                    >
+                        Favourites
+                    </NavLink>
+
+                    <NavLink
+                        to="/contact"
+                        onClick={closeMenu}
+                    >
+                        Contact
+                    </NavLink>
+
+                </div>
+            )}
 
         </nav>
     );

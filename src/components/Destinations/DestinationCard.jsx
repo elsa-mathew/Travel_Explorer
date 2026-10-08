@@ -1,28 +1,44 @@
-function DestinationCard({ image, location, description, rating }) {
-    return (
-        <article className="destination-card">
+import "./Destinations.css";
+import { useNavigate } from "react-router-dom";
 
-            <img src={image} alt={location} />
+function DestinationCard({ destination }) {
+
+    const navigate = useNavigate();
+
+    const handleCardClick = () => {
+        navigate(`/destinations/${destination.id}`);
+    };
+
+    return (
+        <div
+            className="destination-card"
+            onClick={handleCardClick}
+        >
+            <img
+                src={destination.image}
+                alt={destination.location}
+            />
 
             <div className="destination-card-content">
+
                 <span className="destination-rating">
-                    ★ {rating}
+                    ★ {destination.rating}
                 </span>
 
-                <p className="destination-location">
-                    {location}
-                </p>
+                <h3 className="destination-location">
+                    {destination.location}
+                </h3>
 
                 <p className="destination-description">
-                    {description}
+                    {destination.description}
                 </p>
 
                 <span className="destination-arrow">
                     Explore →
                 </span>
-            </div>
 
-        </article>
+            </div>
+        </div>
     );
 }
 

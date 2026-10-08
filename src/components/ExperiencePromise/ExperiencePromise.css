@@ -47,3 +47,25 @@
     font-size: 13px;
     color: #707872;
 }
+
+@media (max-width: 768px) {
+
+    .experience-promise {
+        width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .experience-items {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+    }
+
+    .experience-item {
+        padding: 8px 5px;
+        min-width: 0;
+    }
+
+}

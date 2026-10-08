@@ -74,3 +74,23 @@
 .category-item:hover {
     color: #F59A32;
 }
+
+@media (max-width: 768px) {
+
+    .category-rail {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding-bottom: 10px;
+        scrollbar-width: none;
+    }
+
+    .category-rail::-webkit-scrollbar {
+        display: none;
+    }
+
+    .category-item {
+        flex: 0 0 auto;
+    }
+
+}

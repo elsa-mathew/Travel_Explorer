@@ -104,7 +104,7 @@ function DestinationPageGrid({ selectedCategory }) {
             );
 
     return (
-        <div className="destination-grid">
+        <div className="destination-page-grid">
 
             {filteredDestinations.map((destination) => (
 

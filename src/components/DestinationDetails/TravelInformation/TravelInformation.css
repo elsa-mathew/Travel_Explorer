@@ -48,3 +48,42 @@
     font-weight: 600;
     color: #123C2D;
 }
+
+@media (max-width: 768px) {
+
+    .travel-information {
+        width: calc(100% - 30px);
+        margin: 60px auto;
+        padding: 45px 0;
+    }
+
+    .travel-info-header {
+        margin-bottom: 30px;
+    }
+
+    .travel-info-header h2 {
+        font-size: 30px;
+        line-height: 1.1;
+    }
+
+    .travel-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .travel-info-item {
+        min-height: 105px;
+        padding: 18px 14px;
+        gap: 8px;
+    }
+
+    .travel-info-item span {
+        font-size: 9px;
+        letter-spacing: 1.3px;
+    }
+
+    .travel-info-item strong {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+}

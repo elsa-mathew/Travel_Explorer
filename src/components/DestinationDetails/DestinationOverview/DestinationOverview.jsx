@@ -1,6 +1,19 @@
+import { useParams } from "react-router-dom";
+import destinations from "../../../data/destinations";
 import "./DestinationOverview.css";
 
 function DestinationOverview() {
+
+    const { destinationId } = useParams();
+
+    const destination = destinations.find(
+        (item) => item.id === destinationId
+    );
+
+    if (!destination) {
+        return null;
+    }
+
     return (
         <section className="destination-overview">
 
@@ -11,20 +24,15 @@ function DestinationOverview() {
                 </p>
 
                 <h2>
-                    A tropical escape
-                    worth remembering.
+                    {destination.overviewTitle}
                 </h2>
 
                 <p>
-                    Bali is a beautiful island known for its
-                    tropical beaches, peaceful temples, lush
-                    landscapes and rich local culture. From
-                    relaxing coastal escapes to adventurous
-                    experiences, there is something for every
-                    kind of traveller.
+                    {destination.overviewDescription}
                 </p>
 
             </div>
+
 
             <div className="overview-details">
 
@@ -33,27 +41,29 @@ function DestinationOverview() {
                     <span>BEST TIME</span>
 
                     <strong>
-                        April – October
+                        {destination.bestTime}
                     </strong>
 
                 </div>
+
 
                 <div className="overview-detail">
 
                     <span>IDEAL DURATION</span>
 
                     <strong>
-                        5 – 7 Days
+                        {destination.idealDuration}
                     </strong>
 
                 </div>
+
 
                 <div className="overview-detail">
 
                     <span>TRAVEL STYLE</span>
 
                     <strong>
-                        Beach · Culture · Nature
+                        {destination.travelStyle}
                     </strong>
 
                 </div>

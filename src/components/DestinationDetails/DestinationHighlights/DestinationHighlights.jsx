@@ -1,24 +1,18 @@
+import { useParams } from "react-router-dom";
+import destinations from "../../../data/destinations";
 import "./DestinationHighlights.css";
 
 function DestinationHighlights() {
 
-    const highlights = [
-        {
-            image: "/images/destinations/bali.png",
-            title: "Ubud",
-            type: "Culture & Nature"
-        },
-        {
-            image: "/images/destinations/bali.png",
-            title: "Tropical Beaches",
-            type: "Relaxation"
-        },
-        {
-            image: "/images/destinations/bali.png",
-            title: "Ancient Temples",
-            type: "Heritage"
-        }
-    ];
+    const { destinationId } = useParams();
+
+    const destination = destinations.find(
+        (item) => item.id === destinationId
+    );
+
+    if (!destination) {
+        return null;
+    }
 
     return (
         <section className="destination-highlights">
@@ -30,18 +24,19 @@ function DestinationHighlights() {
                 </p>
 
                 <h2>
-                    Discover the best of Bali.
+                    Discover the best of {destination.name}.
                 </h2>
 
             </div>
 
+
             <div className="highlights-grid">
 
-                {highlights.map((highlight, index) => (
+                {destination.highlights.map((highlight) => (
 
                     <article
                         className="highlight-card"
-                        key={index}
+                        key={highlight.title}
                     >
 
                         <div className="highlight-image">

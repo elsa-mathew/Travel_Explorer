@@ -103,3 +103,62 @@
 .favourite-explore:hover {
     color: #F59A32;
 }
+
+@media (max-width: 768px) {
+
+    .favourite-grid-section {
+        width: calc(100% - 30px);
+        margin: 60px auto;
+    }
+
+    .favourite-grid-header {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .favourite-grid-header h2 {
+        font-size: 28px;
+    }
+
+    .favourite-grid-header > span {
+        display: block;
+        margin-top: 6px;
+        font-size: 11px;
+    }
+
+    .favourite-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .favourite-card-image {
+        height: 130px;
+        border-radius: 12px;
+    }
+
+    .favourite-card-content {
+        padding: 10px 2px 0;
+    }
+
+    .favourite-rating {
+        font-size: 9px;
+        margin-bottom: 4px;
+    }
+
+    .favourite-card-content h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .favourite-card-content p {
+        font-size: 10px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+    }
+
+    .favourite-explore {
+        font-size: 10px;
+    }
+
+}

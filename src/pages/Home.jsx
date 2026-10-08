@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import DiscoveryBar from "../components/Discovery/DiscoveryBar";
-import ExperiencePromise from "../components/ExperiencePromise/ExperiencePromise";
+
 import PopularDestinations from "../components/Destinations/PopularDestinations";
 import TravelMood from "../components/TravelMood/TravelMood";
 import FeaturedEscape from "../components/FeaturedEscape/FeaturedEscape";
@@ -14,7 +14,7 @@ function Home(){
             <Navbar />
             <Hero />
             <DiscoveryBar />
-            <ExperiencePromise />
+            
             <PopularDestinations />
             <TravelMood />
             <FeaturedEscape />

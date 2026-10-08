@@ -33,3 +33,38 @@
     line-height: 1.7;
     color: #DDE7D8;
 }
+
+@media (max-width: 768px) {
+
+    .favourite-hero {
+        width: calc(100% - 30px);
+        min-height: 260px;
+        margin: 90px auto 0;
+        padding: 35px 24px;
+
+        border-radius: 22px;
+    }
+
+    .favourite-hero-content {
+        max-width: 100%;
+    }
+
+    .favourite-hero .section-label {
+        margin-bottom: 10px;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .favourite-hero h1 {
+        margin-bottom: 14px;
+        font-size: 38px;
+        line-height: 1.08;
+    }
+
+    .favourite-hero p:last-child {
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+}

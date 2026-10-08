@@ -95,3 +95,71 @@
 .contact-submit:hover {
     background-color: #F59A32;
 }
+
+@media (max-width: 768px) {
+
+    .contact-form-section {
+        width: calc(100% - 30px);
+        margin: 50px auto 70px;
+        padding: 35px 22px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        border-radius: 22px;
+    }
+
+    .contact-form-intro {
+        max-width: 100%;
+    }
+
+    .contact-form-intro h2 {
+        margin-bottom: 14px;
+        font-size: 30px;
+        line-height: 1.1;
+    }
+
+    .contact-form-intro > p:last-child {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .contact-form {
+        width: 100%;
+        gap: 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .form-field {
+        width: 100%;
+        gap: 7px;
+    }
+
+    .form-field label {
+        font-size: 10px;
+    }
+
+    .form-field input,
+    .form-field textarea {
+        width: 100%;
+        padding: 13px 14px;
+        font-size: 12px;
+    }
+
+    .form-field textarea {
+        min-height: 120px;
+    }
+
+    .contact-submit {
+        align-self: stretch;
+        width: 100%;
+        padding: 13px 20px;
+        font-size: 12px;
+    }
+
+}

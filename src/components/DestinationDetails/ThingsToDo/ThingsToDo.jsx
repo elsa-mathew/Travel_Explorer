@@ -1,77 +1,71 @@
+import { useParams } from "react-router-dom";
+import destinations from "../../../data/destinations";
 import "./ThingsToDo.css";
 
 function ThingsToDo() {
 
-    const activities = [
-        {
-            number: "01",
-            title: "Explore Ubud",
-            description: "Discover rice terraces, local markets and peaceful surroundings."
-        },
-        {
-            number: "02",
-            title: "Visit Ancient Temples",
-            description: "Experience Bali's iconic temples and rich cultural heritage."
-        },
-        {
-            number: "03",
-            title: "Relax at the Beach",
-            description: "Spend a peaceful day by the coast and enjoy the tropical scenery."
-        },
-        {
-            number: "04",
-            title: "Try Local Cuisine",
-            description: "Taste traditional Balinese dishes and local flavours."
-        }
-    ];
+    const { destinationId } = useParams();
+
+    const destination = destinations.find(
+        (item) => item.id === destinationId
+    );
+
+    if (!destination) {
+        return null;
+    }
 
     return (
         <section className="things-to-do">
 
             <div className="things-header">
-                <div>
-                    <p className="section-label">
-                        THINGS TO DO
-                    </p>
 
-                    <h2>
-                        Make the most of
-                        <br />
-                        your journey.
-                    </h2>
-                </div>
+                <h2>
+                    Things to do in {destination.name}.
+                </h2>
 
                 <p className="things-intro">
-                    From cultural experiences to peaceful
-                    escapes, discover experiences worth adding
-                    to your trip.
+                    Discover memorable experiences,
+                    beautiful places and local moments
+                    that make this destination special.
                 </p>
+
             </div>
+
 
             <div className="activities-list">
 
-                {activities.map((activity) => (
-                    <article
-                        className="activity-item"
-                        key={activity.number}
-                    >
-                        <span className="activity-number">
-                            {activity.number}
-                        </span>
+                {destination.thingsToDo.map(
+                    (activity, index) => (
 
-                        <div className="activity-content">
-                            <h3>{activity.title}</h3>
+                        <article
+                            className="activity-item"
+                            key={activity.title}
+                        >
 
-                            <p>
-                                {activity.description}
-                            </p>
-                        </div>
+                            <span className="activity-number">
+                                {String(index + 1).padStart(2, "0")}
+                            </span>
 
-                        <span className="activity-arrow">
-                            →
-                        </span>
-                    </article>
-                ))}
+                            <div className="activity-content">
+
+                                <h3>
+                                    {activity.title}
+                                </h3>
+
+                                <p>
+                                    {activity.description}
+                                </p>
+
+                            </div>
+
+                            <span className="activity-arrow">
+                                →
+                            </span>
+
+                        </article>
+
+                    )
+                )}
 
             </div>
 

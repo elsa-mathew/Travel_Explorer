@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 function Footer() {
@@ -17,36 +18,57 @@ function Footer() {
 
                 </div>
 
+
                 <div className="footer-column">
 
                     <h3>Explore</h3>
 
-                    <a href="#">Destinations</a>
-                    <a href="#">Categories</a>
-                    <a href="#">Favourites</a>
+                    <Link to="/destinations">
+                        Destinations
+                    </Link>
+
+                    <Link to="/destinations">
+                        Categories
+                    </Link>
+
+                    <Link to="/favourites">
+                        Favourites
+                    </Link>
 
                 </div>
+
 
                 <div className="footer-column">
 
                     <h3>Company</h3>
 
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <Link to="/contact">
+                        Contact
+                    </Link>
 
                 </div>
+
 
                 <div className="footer-column">
 
                     <h3>Follow</h3>
 
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">Pinterest</a>
+                    <a href="#" target="_blank" rel="noreferrer">
+                        Instagram
+                    </a>
+
+                    <a href="#" target="_blank" rel="noreferrer">
+                        Facebook
+                    </a>
+
+                    <a href="#" target="_blank" rel="noreferrer">
+                        Pinterest
+                    </a>
 
                 </div>
 
             </div>
+
 
             <div className="footer-bottom">
 

@@ -1,6 +1,10 @@
 import "./FeaturedEscape.css";
+import { useNavigate } from "react-router-dom";
 
 function FeaturedEscape() {
+
+    const navigate = useNavigate();
+
     return (
         <section className="featured-escape">
 
@@ -24,7 +28,11 @@ function FeaturedEscape() {
                     landscapes, peaceful fjords and unforgettable journeys.
                 </p>
 
-                <button>
+                <button
+                    onClick={() =>
+                        navigate("/destinations/japan")
+                    }
+                >
                     Explore →
                 </button>
 
